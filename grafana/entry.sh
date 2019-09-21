@@ -1,6 +1,6 @@
 #!/bin/bash
 
-grafana-cli --pluginsDir "/var/lib/grafana/plugins" plugins install alexandra-trackmap-panel
+grafana-cli plugins install alexandra-trackmap-panel
 
 /usr/src/app/api.sh &
-grafana-server -homepath /usr/share/grafana
+grafana-server --homepath /usr/share/grafana cfg:default.paths.plugins="/var/lib/grafana/plugins"
