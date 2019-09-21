@@ -15,7 +15,4 @@ RUN install_packages \
 RUN chmod +x /usr/src/app/download.sh && /usr/src/app/download.sh "%%BALENA_MACHINE_NAME%%"
 RUN dpkg -i /tmp/grafana.deb && rm /tmp/grafana.deb
 
-USER grafana
-grafana-cli --pluginsDir "$GF_PATHS_PLUGINS" plugins install alexandra-trackmap-panel
-
 CMD ["/bin/sh","/usr/src/app/entry.sh"]
