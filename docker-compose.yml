@@ -30,5 +30,8 @@ services:
     telegraf:
         build: ./telegraf
         restart: always
-        volumes:
-            - /var/run/docker.sock:/var/run/docker.sock
+        links:
+            - influxdb
+        depends_on:
+            - mqtt
+            - influxdb
