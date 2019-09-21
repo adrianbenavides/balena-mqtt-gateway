@@ -4,6 +4,11 @@ volumes:
     sense-data:
 
 services:
+    mqtt:
+        image: panuwitp/mosquitto-arm
+        ports:
+            - "1883:1883"
+
     influxdb:
         restart: always
         build: ./influxdb
@@ -25,8 +30,10 @@ services:
     telegraf:
         build: ./telegraf
         restart: always
-
-    mqtt:
-        image: panuwitp/mosquitto-arm
-        ports:
-            - "1883:1883"
+        links:
+            - influxdb
+        volumes:
+            - /var/run/docker.sock:/var/run/docker.sock
+        depends_on:
+            - mqtt
+            - influxdb
