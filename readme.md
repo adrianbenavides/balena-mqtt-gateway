@@ -13,7 +13,4 @@ You will need to be logged in if you want to manage dashboards. The first time y
 * [More grafana plugins](https://grafana.com/grafana/plugins)
 
 ## MQTT example message
-+-----------+-+---------+
-|measurement| |field_set|
-+-----------+-+---------+
 `gps lat=41.00102,lng=1.19902,speed=1.45`
