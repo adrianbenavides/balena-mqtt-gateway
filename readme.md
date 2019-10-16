@@ -8,9 +8,9 @@ You will need to be logged in if you want to manage dashboards. The first time y
 ## Resources
 * [Customizing the default grafana docker image](https://github.com/grafana/grafana/tree/master/packaging/docker)
 * [Latest grafana executable](https://grafana.com/grafana/download?platform=arm)
-* [Using mqtt as a Telegraf input](https://www.influxdata.com/integration/mqtt-monitoring/)
+* [Using mqtt as a Telegraf input spurce](https://www.influxdata.com/integration/mqtt-monitoring/)
 * [InfluxDB line protocol format](https://docs.influxdata.com/influxdb/v1.7/write_protocols/line_protocol_tutorial/)
 * [More grafana plugins](https://grafana.com/grafana/plugins)
 
-## MQTT example message
+## Example of a valuid MQTT message
 `gps lat=41.00102,lng=1.19902,speed=1.45`
